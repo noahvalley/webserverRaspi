@@ -13,6 +13,7 @@ var server = express();
 
 // apply the vhost middleware
 server.use(vhost('festival-jups.ch', frontend));
+server.use(vhost('live.festival-jups.ch', frontend));
 server.use(vhost('admin.festival-jups.ch', backend));
 server.use(vhost('api.festival-jups.ch', api));
 
