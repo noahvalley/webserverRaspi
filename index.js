@@ -14,7 +14,10 @@ var server = express();
 // apply the vhost middleware
 server.use(vhost('festival-jups.ch', frontend));
 server.use(vhost('www.festival-jups.ch', function(req,res,next){
-  res.redirect('http://festival-jups.ch');
+  res.writeHead(302, {
+    'Location': 'http://festival-jups.ch'
+  });
+  res.end();
 }));
 server.use(vhost('admin.festival-jups.ch', backend));
 server.use(vhost('api.festival-jups.ch', api));
