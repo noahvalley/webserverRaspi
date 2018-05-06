@@ -15,7 +15,7 @@ var server = express();
 server.use(vhost('festival-jups.ch', frontend));
 server.use(vhost('www.festival-jups.ch', function(req,res,next){
   res.writeHead(302, {
-    'Location': 'http://festival-jups.ch'
+    'Location': 'http://festival-jups.ch' + req.url
   });
   res.end();
 }));
