@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",
-    "npm": "^5.8.0",
+    "npm": "^6.14.6",
     "vhost": "^3.0.2"
   }
 }
